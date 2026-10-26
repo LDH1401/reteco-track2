@@ -1,0 +1,4 @@
+# Đường dẫn lấy từ biến môi trường trong .env
+data_dir: ${DATA_DIR}
+index_dir: ${INDEX_DIR}
+cache_dir: ${CACHE_DIR}

@@ -1,0 +1,10 @@
+run_name: level0-bm25-hist
+splits: [train, dev]
+retrieval:
+  bm25:
+    k1: 0.9
+    b: 0.4
+    query: Q2          # câu hỏi + "\n\nConversation History:\n" + lịch sử (baseline chính thức)
+    depth: 1000
+output:
+  run_depth: 100

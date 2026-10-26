@@ -1,0 +1,20 @@
+# môi trường
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+
+# dữ liệu và file lớn (để ngoài git)
+data/
+indexes/
+cache/
+*.npy
+*.faiss
+*.index
+
+# notebook
+.ipynb_checkpoints/
+
+# đầu ra tạm (chỉ commit outputs/results, outputs/qgen, outputs/milestones)
+outputs/tmp/

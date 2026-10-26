@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reteco"
+version = "0.1.0"
+description = "RETECO SemEval-2027 Track 2 (Subtrack 2a/2b/2c) system"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pyyaml",
+  "tqdm",
+  "python-dotenv",
+  "huggingface_hub",
+  "pytrec-eval-terrier",
+  "gensim",
+  "nltk",
+  "faiss-cpu",
+  "tiktoken",
+  "openai",
+]
+
+[project.optional-dependencies]
+gpu = ["torch", "transformers", "sentence-transformers", "peft"]
+dev = ["pytest", "ruff", "pre-commit", "nbstripout"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

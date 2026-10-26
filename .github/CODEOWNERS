@@ -1,0 +1,6 @@
+# Thay @NGUOI_B bằng tài khoản GitHub của người cùng nhóm. Mẫu khớp SAU CÙNG được áp dụng.
+/src/reteco/retrieval/   @LDH1401
+/src/reteco/llm/         @NGUOI_B
+/prompts/                @NGUOI_B
+/src/reteco/common/      @LDH1401 @NGUOI_B
+/src/reteco/eval/        @LDH1401 @NGUOI_B
