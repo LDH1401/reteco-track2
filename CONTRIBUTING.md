@@ -1,11 +1,11 @@
-# Quy tắc làm việc
+# Contributing
 
-- `main` luôn chạy được; không push thẳng lên `main`.
-- Mỗi việc một nhánh ngắn: `<người>/<việc>`, ví dụ `A/dense-maxp`, `B/prompt-understand-v2`.
-- Merge qua Pull Request: 1 người review + `pytest -q` chạy qua; squash merge.
-- Commit: `<loại>(<phạm vi>): <mô tả>`, loại ∈ feat, fix, exp, prompt, docs, refactor, test, chore.
-- Khoá dữ liệu luôn là `(domain, topic_id)`; đầu ra tách theo lĩnh vực.
-- Mỗi lần chạy ghi một file `outputs/results/<run_id>.json`; run_id = `YYYYMMDD-<người>-<mô tả>`.
-- Chỉ tinh chỉnh trên train; dev chỉ đo ở các mốc (ghi vào docs/decisions.md).
-- Không commit: dữ liệu, vector, index, cache, `.env`, notebook còn output.
-- Gắn tag ở mỗi mốc: level0 … level4, rc1, submit-2c-v1.
+- `main` must always run; do not push directly to `main`.
+- One short branch per task: `<member>/<task>`, e.g. `A/dense-maxp`, `B/prompt-understand-v2`.
+- Merge via Pull Request: 1 reviewer + `pytest -q` passing; squash merge.
+- Commits: `<type>(<scope>): <description>`, type ∈ feat, fix, exp, prompt, docs, refactor, test, chore.
+- The data key is always `(domain, topic_id)`; outputs are split by domain.
+- Each run writes one file `outputs/results/<run_id>.json`; run_id = `YYYYMMDD-<member>-<description>`.
+- Tune on train only; measure dev only at milestones (record in docs/decisions.md).
+- Never commit: data, vectors, indexes, caches, `.env`, notebooks with outputs.
+- Tag each milestone: level0 … level4, rc1, submit-2c-v1.

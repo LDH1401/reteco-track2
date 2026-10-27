@@ -1,7 +1,7 @@
-# Các quyết định thiết kế
+# Design decisions
 
-## Memory chỉ là thí nghiệm tuỳ chọn, phạm vi một hội thoại
-- Hội thoại ngắn (3–12 lượt, ~440 token) và mỗi hội thoại là một người dùng độc lập, nên lịch sử đưa thẳng vào prompt/truy vấn là đủ; không có memory xuyên hội thoại.
-- `src/reteco/memory/` chỉ phục vụ thí nghiệm tuần 8: tái dùng tài liệu của lượt trước (`prev_docs`) và phát hiện chuyển chủ đề bằng độ tương đồng (`shift`).
-- Bộ nhớ phải được xoá khi sang hội thoại mới; `tests/test_memory.py` kiểm tra điều này.
-- Đo oracle (gold của lượt trước) trước; chỉ giữ nếu tăng điểm trên train mà dev không giảm.
+## Memory is an optional experiment, scoped to a single conversation
+- Conversations are short (3–12 turns, ~440 tokens) and each comes from an independent user, so putting the history directly into the prompt/query is enough; there is no cross-conversation memory.
+- `src/reteco/memory/` only serves the week-8 experiment: reusing documents from previous turns (`prev_docs`) and detecting topic shifts by similarity (`shift`).
+- Memory must be cleared when moving to a new conversation; `tests/test_memory.py` checks this.
+- Measure the oracle (previous-turn gold) first; keep it only if it improves train without lowering dev.

@@ -1,12 +1,12 @@
-## Thay đổi
+## Changes
 
-## Lý do
+## Rationale
 
-## Kết quả trên TRAIN
+## Results on TRAIN
 run_id: …
-nDCG@10 trước → sau (theo lượt / theo lĩnh vực): …
+nDCG@10 before → after (per turn / per domain): …
 
 ## Checklist
-- [ ] smoke test drones chạy qua (`pytest -q`)
-- [ ] không commit dữ liệu, vector, API key
-- [ ] cấu hình mới nằm trong configs/, prompt mới là phiên bản mới (không ghi đè)
+- [ ] drones smoke test passes (`pytest -q`)
+- [ ] no data, vectors, or API keys committed
+- [ ] new settings live in configs/; new prompts are new versions (no overwriting)
