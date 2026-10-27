@@ -13,8 +13,8 @@ pytest -q
 ```
 
 ## Phân công
-- Người A: `src/reteco/retrieval/` (index, BM25, dense, gộp, rerank)
-- Người B: `src/reteco/llm/`, `prompts/` (hiểu lượt, sinh câu trả lời, judge)
-- Chung: `src/reteco/common/`, `src/reteco/eval/`, `src/reteco/memory/` (thí nghiệm tuỳ chọn)
+- Người A (@LDH1401): indexing, truy xuất, gộp, rerank: `src/reteco/retrieval/`, `notebooks/kaggle/`
+- Người B: xây truy vấn, memory, sinh câu trả lời: `src/reteco/llm/`, `src/reteco/memory/`, `prompts/`
+- Chung: `src/reteco/common/`, `src/reteco/eval/`, `src/reteco/pipeline/`, `tests/`, `docs/`
 
 Quy tắc làm việc: xem `CONTRIBUTING.md`.
