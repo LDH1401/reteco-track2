@@ -1,0 +1,14 @@
+run_name: exp-memory-prevdocs
+splits: [train, dev]
+# Các mục retrieval/output: chép từ config level tốt nhất hiện tại, chỉ thêm mục memory
+memory:
+  scope: conversation      # bộ nhớ riêng cho từng hội thoại, xoá sạch khi sang hội thoại mới
+  oracle: false            # true = dùng gold của lượt trước, CHỈ để đo mức trần, không dùng khi nộp
+  prev_docs:
+    turns_back: 1          # lấy tài liệu của bao nhiêu lượt trước
+    top_k: 10              # số tài liệu lấy từ mỗi lượt trước
+    rrf_weight: 0.5        # trọng số khi đưa vào RRF, dò trên train
+  shift:
+    method: similarity     # cosine giữa Q3 lượt này và lượt trước
+    threshold: 0.5         # dò trên train
+    on_shift: drop_prev_docs

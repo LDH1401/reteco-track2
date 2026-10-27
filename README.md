@@ -15,6 +15,6 @@ pytest -q
 ## Phân công
 - Người A: `src/reteco/retrieval/` (index, BM25, dense, gộp, rerank)
 - Người B: `src/reteco/llm/`, `prompts/` (hiểu lượt, sinh câu trả lời, judge)
-- Chung: `src/reteco/common/`, `src/reteco/eval/`
+- Chung: `src/reteco/common/`, `src/reteco/eval/`, `src/reteco/memory/` (thí nghiệm tuỳ chọn)
 
 Quy tắc làm việc: xem `CONTRIBUTING.md`.
